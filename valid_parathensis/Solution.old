@@ -1,0 +1,67 @@
+#include <map>
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <vector>
+using namespace std;
+class Solution {
+public:
+    bool isValid(string s) 
+    {
+        if (s.length() % 2 != 0) return false;
+        if (s.length() == 0) return true;
+        
+        vector<int> values;
+        values.push_back(0);
+        for (int i = 0; i < s.length(); i++)
+        {
+            values.push_back(map.at(s[i]));
+        }
+        if (values[1] % 2 == 0) return false;
+        bool result = routine(values);
+        return result;
+    }
+    
+    bool routine(const vector<int> &values)
+    {
+        int count = 0;
+        int i = 1;
+        int j = i + 1;
+        while ( i <= values.size() - 1)
+        {
+            if (count == (values.size() - 1) / 2) return true;
+            if (values[i] % 2 == 0)
+            {
+                i++;
+                j = i+1;
+                continue;
+            }
+            
+            if (values[j] == values[i] + 1 && values[j] % 2 == 0)
+            {
+                count++;
+                i++;
+                j = i + 1;
+                continue;
+            }
+            j = j + 2;
+            if (j > values.size() - 1)
+            {
+                i++;
+                j = i+1;
+            }
+        }
+        return false;
+    }
+
+private:
+    map<char, int> map =
+    {
+        {'(', 1},
+        {')', 2},
+        {'[', 3},
+        {']', 4},
+        {'{', 5},
+        {'}', 6}
+    };
+};
