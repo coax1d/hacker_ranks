@@ -11,7 +11,6 @@ public:
         if (nums.empty()) return 0;
 
         int len = nums.size();
-        bool first_item = true;
         int last_item = nums.at(0);
         
         for (int i = 1; i < nums.size(); ++i)

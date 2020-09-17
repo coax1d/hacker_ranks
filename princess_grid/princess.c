@@ -1,5 +1,5 @@
-// This is a old roughed up solution this code is not a great example
-// but solves the problem in C
+// This is an old roughed up solution this code is not a great example
+// but solves the problem in C WARNING!@##!@ Bad code!!!!
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
