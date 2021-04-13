@@ -1,3 +1,9 @@
+// author: Andrew Burger
+
+// LeetCode problem:
+// O(n) Solution for adding one to a number whos digits are all a single
+// element in an array.
+
 fn plus_one(digits: Vec<i32>) -> Vec<i32> {
 
     let mut solution = digits.clone();
