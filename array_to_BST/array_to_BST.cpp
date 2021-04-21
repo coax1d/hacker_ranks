@@ -1,3 +1,8 @@
+/*
+Author: Andrew Burger
+O(n) solution for converting a vector/array to a Height balanced binary search tree
+*/
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
