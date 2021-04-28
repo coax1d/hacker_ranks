@@ -5,9 +5,9 @@ int main(void)
 	vector<int> nums = {1,1,2,3};
 	Solution do_it;
 	do_it.removeDuplicates(nums);
-	
+
 	ostringstream vts;
-	
+
 	if (!nums.empty())
 	{
 		vts << "[";
